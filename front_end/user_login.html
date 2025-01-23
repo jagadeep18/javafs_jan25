@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="trainer app">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Nithin Neelakanta Rao">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer Search App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        h2 {
+            font-family: Consolas, monospace;
+            font-size: 36px;
+            font-style: oblique;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+
+        label {
+            font-size: 18px;
+            display: inline-block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        .input:focus {
+            border-color: #2575fc;
+            outline: none;
+        }
+
+        button {
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #1e60c9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>User Login Page</h2>
+        <div>
+            <label for="username">Username</label>
+            <input class="input" type="text" id="username">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input class="input" type="password" id="password">
+        </div>
+        <button id="myButton" onclick="loginUser()">Submit</button>
+    </div>
+
+    <script>
+        function loginUser() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === '') {
+                alert('Username cannot be empty');
+                return;
+            }
+            if (password === '') {
+                alert('Password cannot be empty');
+                return;
+            }
+
+            alert('User login successful');
+        }
+    </script>
+
+</body>
+</html>
