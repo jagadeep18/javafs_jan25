@@ -1,0 +1,126 @@
+1 Crud Operations
+2 Multi Table (Atleast 2)
+3 Login Logout
+4 Multi Actor Application
+5 Session Mangement , Data Valuation & Validation , 
+
+
+Work:
+Calculator and Cart(Full Project)
+
+
+Map: Access each element and use them.
+
+Reduce: To calculate some value of the list.
+
+
+
+// 1
+// Input as (node.js)
+let numbers = [10, 20, 30, 40, 50];
+let quotientsOf5 = numbers.map((arrayElement) => {
+    return arrayElement / 5;
+})
+console.log(quotientsOf5)
+
+//output: [ 2, 4, 6, 8, 10 ]
+
+
+
+// 2
+let numbers = [10, 20, 30, 40, 50];
+let quotientsOf5 = numbers.map((arrayElement) => {
+    return arrayElement / 5;
+})
+let lessThan30 = numbers.filter((e) => 
+    {
+        return e < 30;
+    }
+)
+console.log(lessThan30)
+
+// Output: [ 10, 20 ]
+
+
+
+
+
+
+// 3
+let employees = [
+    {name:'dravid',sal:20000},
+    {name:'rohit',sal:30000},
+    {name:'dhoni',sal:25000}
+];
+let names = employees.map((emp) => {
+    return emp.name
+})
+console.log(names)
+
+// Output: [ 'dravid', 'rohit', 'dhoni' ]
+
+
+
+// 4
+let employees = [
+    {name:'dravid',sal:20000},
+    {name:'rohit',sal:30000},
+    {name:'dhoni',sal:25000}
+];
+let filteredEmps = employees.filter((emp) => {
+    return emp.sal <= 25000
+})
+console.log(filteredEmps)
+
+// Output: [ { name: 'dravid', sal: 20000 }, { name: 'dhoni', sal: 25000 } ]
+
+
+
+// 5
+let employees = [
+    {name:'dravid',sal:20000},
+    {name:'rohit',sal:30000},
+    {name:'dhoni',sal:25000}
+];
+
+let totalSal = employees.reduce((sum, emp) => {
+    return sum + emp.sal
+}, 0)
+console.log("total salary = ",totalSal)
+
+// Output: total salary =  75000
+
+
+
+
+
+
+
+
+
+https://spring.io/tools
+
+https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack
+
+
+
+// to create springboot backend application
+https://start.spring.io/
+
+Project -> maven
+language -> Java
+Spring Boot -> 3.4.2
+Project Metadata:
+Group -> com.student
+Artifact -> student_crud
+Name -> student_crud
+Description -> Project for Spring Boot for Student Crud Operations on MongoDb
+Package name -> com.student_crud
+packaging -> Jar
+java -> 17
+
+ 
+Dependencies:
+Spring Web
+Spring Data MongoDb
+Lombok
